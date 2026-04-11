@@ -9,14 +9,14 @@
       <input class="form-control form-control-lg" type="text" placeholder="create your todo" aria-label=".form-control-lg example">
       <div class="data-container">
         <div class="data">
-
+          <router-outlet></router-outlet>
         </div>
         <div class="buttons">
           <p>0 items</p>
           <div class="links">
-            <a >All</a>
-            <a >Active</a>
-            <a >Completed</a>
+           <a routerLink="all" routerLinkActive="active">All</a>
+          <a routerLink="active" routerLinkActive="active">Active</a>
+          <a routerLink="completed" routerLinkActive="active">Completed</a>
           </div>
 
           <button class="clear">Clear Completed</button>

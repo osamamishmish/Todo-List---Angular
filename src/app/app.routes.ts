@@ -7,9 +7,15 @@ import { Completed } from './Components/completed/completed';
 
 export const routes: Routes = [
 
-  { path: '', component: Todo },
-  { path: 'All', component: All },
-  {path:"Active", component:Active},
-  {path:"Completed", component:Completed}
+  {
+    path: '',
+    component: Todo,
+    children: [
+      { path: 'all', component: All },
+      { path: 'active', component: Active },
+      { path: 'completed', component: Completed},
+      { path: '', redirectTo: 'all', pathMatch: 'full' }
+    ]
+  }
 
 ];

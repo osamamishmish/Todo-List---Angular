@@ -39,6 +39,10 @@ align-content: space-between;
   text-decoration:none;
   margin:10px;
 }
+.links a.active {
+  color: white;
+  font-weight: bold;
+}
 .buttons p{
   /* align-self: center; */
   margin:10px 10px;
