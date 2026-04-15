@@ -46,6 +46,7 @@ align-content: space-between;
 .buttons p{
   /* align-self: center; */
   margin:10px 10px;
+  /* background-color: inherit; */
 }
 .clear , .links a {
   background-color: hsl(235, 24%, 19%);
@@ -65,4 +66,12 @@ color:hsl(236, 9%, 61%);
 }
 .todo input::placeholder{
   color:hsl(236, 9%, 61%);
+}
+.header i {
+  font-size: 18px;
+}
+.light-mode{
+  background-color: hsl(236, 33%, 92%);
+  color:hsl(235, 19%, 35%);
+
 }

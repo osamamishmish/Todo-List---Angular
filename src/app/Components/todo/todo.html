@@ -1,25 +1,25 @@
-<div class="todo-container">
+<div class="todo-container" >
 
   <div class="header">
 
-    <h1>Todo</h1>
-    <i class="bi bi-brightness-high-fill"></i>
+    <h1 >Todo</h1>
+    <i [class]=" isDark.isDark()? 'bi bi-brightness-high-fill' :'bi bi-moon-fill'" (click)="toggleMode()"></i>
   </div>
-  <div class="todo">
-      <input class="form-control form-control-lg" type="text" placeholder="create your todo" aria-label=".form-control-lg example">
-      <div class="data-container">
-        <div class="data">
+  <div class="todo" >
+      <input class="form-control form-control-lg" appTheme type="text" placeholder="create your todo" aria-label=".form-control-lg example">
+      <div class="data-container" appTheme>
+        <div class="data" appTheme>
           <router-outlet></router-outlet>
         </div>
-        <div class="buttons">
+        <div class="buttons" appTheme>
           <p>0 items</p>
           <div class="links">
-           <a routerLink="all" routerLinkActive="active">All</a>
-          <a routerLink="active" routerLinkActive="active">Active</a>
-          <a routerLink="completed" routerLinkActive="active">Completed</a>
+           <a routerLink="all" routerLinkActive="active" appTheme>All</a>
+          <a routerLink="active" routerLinkActive="active" appTheme>Active</a>
+          <a routerLink="completed" routerLinkActive="active" appTheme>Completed</a>
           </div>
 
-          <button class="clear">Clear Completed</button>
+          <button class="clear" appTheme>Clear Completed</button>
         </div>
       </div>
   </div>

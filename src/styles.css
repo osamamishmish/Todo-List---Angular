@@ -1,13 +1,24 @@
-body{
+body ,.dark{
+   height:100%;
+  width:100%;
+   background-color: hsl(235, 21%, 11%);
+ background-image :url("./assets/bg-desktop-dark.jpg");
+ height:200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.light{
   height:100%;
   width:100%;;
-  background-color: hsl(235, 21%, 11%);
- background-image :url("./assets/bg-desktop-dark.jpg");
+  background-color: hsl(236, 33%, 92%);
+ background-image :url("./assets/bg-desktop-light.jpg");
  height:200px;
  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+color :hsl(235, 19%, 35%);
 }
 :host {
   display: block;
