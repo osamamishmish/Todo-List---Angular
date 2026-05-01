@@ -14,18 +14,22 @@ import { ToggleCheck } from '../../Directives/toggle-check';
 export class Todo {
   isDark=inject(Styling);
   // checking=inject(ToggleCheck);
-  toggleTodo =this.isDark.toggleChecking;
+  // toggleTodo =this.isDark.toggleChecking;
+  toggleTodo:boolean=false;
   completedTodos(checked:boolean){
 
     if(checked){
-this.toggleTodo.update(e=>!e);
+      this.toggleTodo=true;
+// this.toggleTodo.update(e=>!e);
 
   }else{
-this.toggleTodo.update(e=>!e);
+          this.toggleTodo=false;
+
+// this.toggleTodo.update(e=>!e);
   }
 }
   AddTodos(value:string){
-    if(this.toggleTodo()){
+    if(this.toggleTodo){
       this.isDark.all.update(e=>[...e,{text:value,checked:true}]);
 
     }else{

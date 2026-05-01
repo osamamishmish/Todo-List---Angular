@@ -7,8 +7,8 @@
   </div>
   <div class="todo" >
       <div class="input-container">
-      <input type="checkbox" #checkinput (change)="completedTodos(checkinput.checked)" [checked]="false"/>
-      <input class="form-control form-control-lg" #todos (keyup.enter)="AddTodos(todos.value ); todos.value='';checkinput.checked=false" appTheme type="text" placeholder="create your todo" aria-label=".form-control-lg example">
+      <input type="checkbox" #checkinput (change)="completedTodos(checkinput.checked)" />
+      <input class="form-control form-control-lg" #todos (keyup.enter)="AddTodos(todos.value ); todos.value='';checkinput.checked=false" appTheme type="text" placeholder="create your todo" aria-label=".form-control-lg example" />
       </div>
       <div class="data-container" appTheme>
         <!-- <div class="data" appTheme>
