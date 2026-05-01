@@ -6,11 +6,16 @@
     <i [class]=" isDark.isDark()? 'bi bi-brightness-high-fill' :'bi bi-moon-fill'" (click)="toggleMode()"></i>
   </div>
   <div class="todo" >
-      <input class="form-control form-control-lg" appTheme type="text" placeholder="create your todo" aria-label=".form-control-lg example">
+      <div class="input-container">
+      <input type="checkbox" #checkinput (change)="completedTodos(checkinput.checked)" [checked]="false"/>
+      <input class="form-control form-control-lg" #todos (keyup.enter)="AddTodos(todos.value ); todos.value='';checkinput.checked=false" appTheme type="text" placeholder="create your todo" aria-label=".form-control-lg example">
+      </div>
       <div class="data-container" appTheme>
-        <div class="data" appTheme>
-          <router-outlet></router-outlet>
-        </div>
+        <!-- <div class="data" appTheme>
+        </div> -->
+                  <router-outlet></router-outlet>
+
+
         <div class="buttons" appTheme>
           <p>0 items</p>
           <div class="links">

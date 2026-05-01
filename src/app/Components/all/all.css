@@ -1,0 +1,41 @@
+.all-container{
+  display:flex;
+  flex-flow:column;
+border:1px solid inherit;
+  border-radius:20px;
+  margin:5px 10px;
+  justify-content:flex-start;
+  align-items:center;
+  width:inherit;
+
+
+
+}
+.all{
+  display:flex;
+  flex-flow:row;
+  justify-content:space-between;
+  border-bottom:1px solid hsl(236, 9%, 61%);
+  width:100%;
+  padding:10px;
+}
+:host{
+  width:inherit;
+}
+.content{
+  display:flex;
+  justify-content:flex-start;
+  margin:5px;
+  align-items:center;
+  gap:10px;
+
+}
+.all span{
+  display:flex;
+  justify-content:flex-end;
+}
+.content input{
+ width:20px;
+  height:20px;
+}
+

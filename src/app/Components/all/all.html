@@ -1,1 +1,14 @@
+<div class="all-container" appTheme>
+@for(todos of allTodos() ; track $index ){
+  <div class="all">
+    <div class="content">
+      <input type="checkbox" (change)="toggleTodo($index)" [checked]="todos.checked"/>
+      <p appToggleCheck>{{todos.text}}</p>
+    </div>
 
+  <span><i class="bi bi-x-lg"></i></span>
+    </div>
+
+
+}
+</div>

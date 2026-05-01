@@ -4,7 +4,7 @@ import { Todo } from './Components/todo/todo';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet , Todo],
+  imports: [RouterOutlet ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

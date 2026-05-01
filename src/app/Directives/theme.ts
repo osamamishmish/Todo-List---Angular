@@ -1,5 +1,5 @@
 import { Directive, ElementRef, inject, effect } from '@angular/core';
-import { Styling } from './styling';
+import { Styling } from '../Services/styling';
 
 @Directive({
   selector: '[appTheme]',

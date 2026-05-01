@@ -11,13 +11,19 @@
   flex-flow:row;
   justify-content:space-between;
   align-items:center;
-  margin:10px 10px;
+  margin:10px 0px;
 }
 .data-container{
   display:flex;
   flex-flow:column;
-align-content: space-between;
-  margin-top:20px;
+align-content: space-between !important;
+      margin:20px 0px;
+  background-color: transparent !important;
+  padding:0px;
+  width:100%;
+
+
+
 }
 .buttons{
     display:flex;
@@ -25,9 +31,10 @@ align-content: space-between;
     justify-content:space-between;
     align-items:center;
     height: 50px;
-    margin :10px 10px;
+    margin :5px 10px;
     padding :0px 0px;
-    border-radius: 10px;
+    border:1px solid inherit;
+    border-radius: 20px !important;
 }
 .links{
   display:flex;
@@ -59,6 +66,12 @@ color:hsl(236, 9%, 61%);
   background-color: hsl(235, 24%, 19%);
 
 }
+.todo{
+  display: flex;
+  flex-flow: column;
+  align-content:space-between;
+
+}
 .todo input{
   background-color: hsl(235, 24%, 19%);
   color:white;
@@ -73,5 +86,28 @@ color:hsl(236, 9%, 61%);
 .light-mode{
   background-color: hsl(236, 33%, 92%);
   color:hsl(235, 19%, 35%);
+
+}
+.input-container{
+  display:flex;
+  flex-flow:row;
+  align-items:center;
+  gap:5px;
+}
+input[type="checkbox"]{
+  width:35px;
+  height:40px;
+  accent-color:hsl(235, 24%, 19%);
+  /* border-radius:50%; */
+}
+.data{
+   border:1px solid inherit;
+  border-radius:20px;
+  margin:5px 10px;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  padding:10px;
+  width:inherit;
 
 }
