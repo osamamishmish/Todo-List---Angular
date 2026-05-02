@@ -9,16 +9,19 @@ import { Directive, effect, inject, ElementRef, input } from '@angular/core';
 export class ToggleCheck {
    check=inject(Styling);
   el=inject(ElementRef);
-  ToggleCheck=this.check.toggleChecking;
+  textStyling=this.check.all;
+  // ToggleCheck=this.check.toggleChecking;
   constructor() {
     effect(()=>{
-       if(this.el.nativeElement.checked ){
-        this.el.nativeElement.style.textDecoration='line-through';
+      this.textStyling().map(e=>e.text===this.el.nativeElement.textContent&&e.checked)?
+      this.el.nativeElement.style.textDecoration='line-through':this.el.nativeElement.style.textDecoration='none';
+      //  if(this.el.nativeElement.checked ){
+      //   this.el.nativeElement.style.textDecoration='line-through';
 
-      }else{
-        this.el.nativeElement.style.textDecoration='none';
+      // }else{
+      //   this.el.nativeElement.style.textDecoration='none';
 
-      }
+      // }
       // this.check.all().filter(e=>e.text===this.el.nativeElement.textContent&&e.checked)? this.el.nativeElement.style.textDecoration='line-through':this.el.nativeElement.style.textDecoration='none';
     })
   }

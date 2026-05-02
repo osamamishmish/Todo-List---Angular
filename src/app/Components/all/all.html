@@ -3,7 +3,7 @@
   <div class="all">
     <div class="content">
       <input type="checkbox" (change)="toggleTodo($index)" [checked]="todos.checked"/>
-      <p appToggleCheck>{{todos.text}}</p>
+      <p [class]="todos.checked ? 'completed' : 'active'">{{todos.text}}</p>
     </div>
 
   <span><i class="bi bi-x-lg"></i></span>

@@ -13,7 +13,7 @@ import { ToggleCheck } from '../../Directives/toggle-check';
 export class All {
   todos=inject(Styling);
   allTodos=this.todos.all;
-toggleChecked=this.todos.toggleChecking;
+// toggleChecked=this.todos.toggleChecking;
   toggleTodo(index:number){
 
       this.todos.all.update(all=>all.map((todo,i)=>i===index?{...todo,checked:!todo.checked}:todo));

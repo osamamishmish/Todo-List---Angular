@@ -35,6 +35,7 @@ export class Todo {
     }else{
        this.isDark.all.update(e=>[...e,{text:value,checked:false}]);
 
+
     }
   }
   toggleMode(){
