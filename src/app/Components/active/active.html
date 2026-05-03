@@ -1,1 +1,15 @@
-<p>active works!</p>
+<div class="active-container" appTheme>
+@for(active of activeTodos() ; track $index ){
+  <div class="active">
+    <div class="content">
+      <input type="checkbox" (change)="toggleTodo($index)" [checked]="active.checked"/>
+      <p [class]="active.checked ? 'completed' : 'active'">{{active.text}}</p>
+    </div>
+
+  <span><i class="bi bi-x-lg"></i></span>
+    </div>
+
+
+}
+</div>
+
