@@ -20,5 +20,8 @@ export class All {
 
 
   }
+  deleteTodo(index:number){
+    this.todos.all.update(all=>all.filter((_, i)=>i!==index));
 
+}
 }
