@@ -1,7 +1,7 @@
 <div class="completed-container" appTheme>
 @for(completed of completedTodos() ; track $index ){
   <div class="completed">
-    <div class="content">
+    <div class="completed-content">
       <input type="checkbox" (change)="toggleTodo($index)" [checked]="completed.checked"/>
       <p [class]="completed.checked ? 'completed' : 'active'">{{completed.text}}</p>
     </div>
