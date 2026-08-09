@@ -26,12 +26,14 @@ align-content: space-between !important;
 
 }
 .buttons{
-    display:flex;
-    flex-flow:row;
-    justify-content:space-between;
-    align-items:center;
-    height: 50px;
-    margin :5px 10px;
+  display:flex;
+  flex-flow:row;
+  margin:5px 10px;
+
+  align-items:center;
+  width:500px !important;
+   justify-content:space-between;
+    height: fit-content;
     padding :0px 0px;
     border:1px solid inherit;
     border-radius: 20px !important;
