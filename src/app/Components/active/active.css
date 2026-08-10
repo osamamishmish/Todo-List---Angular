@@ -52,6 +52,7 @@
 .active span{
   display:flex;
   justify-content:flex-end;
+  cursor:pointer;
 }
 .active-content .active-input{
   width: 20px !important;

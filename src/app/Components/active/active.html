@@ -6,7 +6,7 @@
       <p [class]="active.checked ? 'completed' : 'active'">{{active.text}}</p>
     </div>
 
-  <span><i class="bi bi-x-lg"></i></span>
+  <span (click)="deleteActive($index)"><i class="bi bi-x-lg"></i></span>
     </div>
 
 

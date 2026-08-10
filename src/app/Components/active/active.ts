@@ -20,8 +20,8 @@ export class Active {
 
 
   }
-
-
-
+  deleteActive(index:number){
+    this.active.all.update(all=>all.filter((_, i)=>i!==index));
+  }
 
 }
