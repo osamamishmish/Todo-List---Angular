@@ -50,5 +50,8 @@ export class Todo {
 
     }
   }
+  clearCompleted(){
+    this.isDark.all.update(e=>e.filter(todo=>!todo.checked));
+  }
 }
 
