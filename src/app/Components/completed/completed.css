@@ -50,6 +50,7 @@
 .completed span{
   display:flex;
   justify-content:flex-end;
+  cursor:pointer;
 }
 .completed-content input{
   width: 20px !important;

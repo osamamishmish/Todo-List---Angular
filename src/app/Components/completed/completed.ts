@@ -17,5 +17,8 @@ export class Completed {
       this.completed.all.update(all=>all.map((todo,i)=>i===index?{...todo,checked:!todo.checked}:todo));
 
   }
+  deleteCompleted(index:number){
+    this.completed.all.update(all=>all.filter((_, i)=>i!==index));
+  }
 
 }
