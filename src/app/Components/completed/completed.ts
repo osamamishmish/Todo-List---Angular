@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, effect, inject } from '@angular/core';
 import { Theme } from '../../Directives/theme';
 import { Styling } from '../../Services/styling';
 
@@ -19,6 +19,11 @@ export class Completed {
   }
   deleteCompleted(index:number){
     this.completed.all.update(all=>all.filter((_, i)=>i!==index));
+  }
+  constructor(){
+    effect(()=>{
+    this.completed.count.set(this.completedTodos().length);
+    });
   }
 
 }

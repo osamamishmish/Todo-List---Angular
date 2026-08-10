@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, AfterViewInit, effect } from '@angular/core';
 import { Styling } from '../../Services/styling';
 import { Theme } from '../../Directives/theme';
 import { ToggleCheck } from '../../Directives/toggle-check';
@@ -10,7 +10,7 @@ import { ToggleCheck } from '../../Directives/toggle-check';
   templateUrl: './all.html',
   styleUrl: './all.css',
 })
-export class All {
+export class All  {
   todos=inject(Styling);
   allTodos=this.todos.all;
 // toggleChecked=this.todos.toggleChecking;
@@ -23,5 +23,10 @@ export class All {
   deleteTodo(index:number){
     this.todos.all.update(all=>all.filter((_, i)=>i!==index));
 
-}
+  }
+  constructor(){
+    effect(()=>{
+    this.todos.count.set(this.todos.all().length);
+    });
+  }
 }

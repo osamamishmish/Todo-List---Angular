@@ -10,14 +10,14 @@
       <input type="checkbox" #checkinput (change)="completedTodos(checkinput.checked)" />
       <input class="form-control form-control-lg" #todos (keyup.enter)="AddTodos(todos.value ); todos.value=''" appTheme type="text" placeholder="create your todo" aria-label=".form-control-lg example" />
       </div>
-      <div class="data-container" appTheme>
+      <div class="data-container"  appTheme>
         <!-- <div class="data" appTheme>
         </div> -->
-                  <router-outlet></router-outlet>
+                  <router-outlet ></router-outlet>
 
 
         <div class="buttons" appTheme>
-          <p>0 items</p>
+          <p>{{ countEle() }} items</p>
           <div class="links">
            <a routerLink="all" routerLinkActive="active" appTheme>All</a>
           <a routerLink="active" routerLinkActive="active" appTheme>Active</a>

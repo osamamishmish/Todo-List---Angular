@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, effect, inject } from '@angular/core';
 import { Theme } from '../../Directives/theme';
 import { Styling } from '../../Services/styling';
 
@@ -23,5 +23,9 @@ export class Active {
   deleteActive(index:number){
     this.active.all.update(all=>all.filter((_, i)=>i!==index));
   }
-
+  constructor(){
+    effect(()=>{
+    this.active.count.set(this.activeTodos().length);
+    });
+  }
 }

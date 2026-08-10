@@ -7,5 +7,6 @@ export class Styling {
   isDark =signal(true);
   toggleChecking=signal(false);
   all = signal<{ text: string; checked: boolean }[]>([]);
+  count=signal(0);
 
 }

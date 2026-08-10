@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { Component, ElementRef, inject, signal, viewChildren } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from "@angular/router";
 import { Theme } from '../../Directives/theme';
 import { Styling } from '../../Services/styling';
@@ -53,5 +53,7 @@ export class Todo {
   clearCompleted(){
     this.isDark.all.update(e=>e.filter(todo=>!todo.checked));
   }
+//
+  countEle=this.isDark.count;
 }
 
